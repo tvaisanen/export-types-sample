@@ -3,7 +3,6 @@
   type definitions that can be installed in a similar way
   that @types/lib-name is used in Typescript."
   (:require [clojure.java.io :as io]
-            [malli.clj-kondo :as clj-kondo]
             [malli.dev :as dev]))
 
 (def Point [:map
@@ -23,6 +22,7 @@
   [p]
   (str p))
 
+(dev/start!)
 
 (defn export-types []
   ;; collect and start instrumentation
@@ -30,7 +30,7 @@
 
   ;; create export file
   (def export-file
-    (io/file "resources/clj-kondo.exports/com/tvaisanen/clj-kondo-types-example/core.clj"))
+    (io/file "resources/clj-kondo.exports/com.tvaisanen/clj-kondo-types-example/core.clj"))
 
   ;; make parents if not exist
   (io/make-parents export-file)
@@ -42,3 +42,5 @@
 
   ;; clear the cache and stop instrumentation
   (dev/stop!))
+
+(export-types)
