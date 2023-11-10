@@ -1,4 +1,4 @@
-(ns com.tvaisanen.clj-kondo-types-example.core
+(ns export-types-sample
   "Simple example on how to create and export type clj-kondo
   type definitions that can be installed in a similar way
   that @types/lib-name is used in Typescript."
@@ -14,15 +14,10 @@
   [p1 p2]
   (merge-with + p1 p2))
 
-(add-points {:x 1 :y 2}
-            {:x 3 :y 1})
-
 (defn render-point
   {:malli/schema [:=> [:cat Point] :string]}
   [p]
   (str p))
-
-(dev/start!)
 
 (defn export-types []
   ;; collect and start instrumentation
@@ -30,7 +25,7 @@
 
   ;; create export file
   (def export-file
-    (io/file "resources/clj-kondo.exports/com.tvaisanen/clj-kondo-types-example/core.clj"))
+    (io/file "resources/clj-kondo.exports/tvaisanen/export-types-sample/config.edn"))
 
   ;; make parents if not exist
   (io/make-parents export-file)
