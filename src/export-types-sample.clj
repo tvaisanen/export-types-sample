@@ -25,7 +25,7 @@
 
   ;; create export file
   (def export-file
-    (io/file "resources/clj-kondo.exports/tvaisanen/export-types-sample/config.edn"))
+    (io/file "resources/clj-kondo/clj-kondo.exports/tvaisanen/export-types-sample/config.edn"))
 
   ;; make parents if not exist
   (io/make-parents export-file)
