@@ -1,10 +1,13 @@
 {:linters {:unresolved-symbol {:exclude [(malli.core/=>)]},
-           :type-mismatch {:namespaces {export-types-sample {render-point {:arities {1 {:args [{:op :keys,
-                                                                                                :req {:x :int, :y :int}}],
-                                                                                        :ret :string}}},
-                                                             add-points {:arities {2 {:args [{:op :keys,
-                                                                                              :req {:x :int, :y :int}}
-                                                                                             {:op :keys,
-                                                                                              :req {:x :int, :y :int}}],
-                                                                                      :ret {:op :keys,
-                                                                                            :req {:x :int, :y :int}}}}}}}}}}
+           :type-mismatch {:namespaces {export-types-sample.core {render-point {:arities {1 {:args [{:op :keys,
+                                                                                                     :req {:x :int,
+                                                                                                           :y :int}}],
+                                                                                             :ret :string}}},
+                                                                  add-points {:arities {2 {:args [{:op :keys,
+                                                                                                   :req {:x :int,
+                                                                                                         :y :int}}
+                                                                                                  {:op :keys,
+                                                                                                   :req {:x :int,
+                                                                                                         :y :int}}],
+                                                                                           :ret {:op :keys,
+                                                                                                 :req {:x :int, :y :int}}}}}}}}}}

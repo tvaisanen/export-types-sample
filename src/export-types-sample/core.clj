@@ -1,4 +1,4 @@
-(ns export-types-sample
+(ns export-types-sample.core
   "Simple example on how to create and export type clj-kondo
   type definitions that can be installed in a similar way
   that @types/lib-name is used in Typescript."
